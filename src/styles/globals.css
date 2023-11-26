@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+#__next {
+  height: 100vh;
+}
+
+#__next .w-md-editor-toolbar,
+#__next .w-md-editor {
+  background-color: hsl(var(--background));
+  border-color: hsl(var(--input));
+  @apply shadow-none;
+}
+
+#__next .w-md-editor-content {
+  @apply rounded border p-4 focus-within:outline;
+}
+
+.#__next w-md-editor-preview {
+  @apply p-4;
+}
+
+#__next .w-md-editor-toolbar {
+  @apply my-2 mb-6 border-none p-0;
+}
+
+#__next .w-md-editor-toolbar > ul {
+  @apply flex items-center;
+}
+
+#__next .w-md-editor-toolbar button svg {
+  @apply h-4 w-4;
+}
+
+#__next .w-md-editor-toolbar button {
+  @apply ring-offset-background focus-visible:ring-ring bg-secondary text-secondary-foreground hover:bg-secondary/80 m-0 inline-flex h-auto items-center  justify-center rounded-none px-4 py-3 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+}
+
+#__next .wmde-markdown.wmde-markdown-color {
+  @apply bg-transparent;
+}
+
+#__next .w-md-editor-toolbar ul li:has(+ .w-md-editor-toolbar-divider) button,
+#__next .w-md-editor-toolbar ul li:last-of-type button {
+  @apply rounded-r-sm;
+}
+
+#__next .w-md-editor-toolbar ul .w-md-editor-toolbar-divider + li button,
+#__next .w-md-editor-toolbar ul li:first-of-type button {
+  @apply rounded-l-sm;
+}
