@@ -2,7 +2,7 @@ import { api } from "~/utils/api";
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 
-import { MarkdownFile } from "@prisma/client";
+import type { MarkdownFile } from "@prisma/client";
 import { useCallback, useState } from "react";
 import { debounce } from "lodash-es";
 import dynamic from "next/dynamic";
