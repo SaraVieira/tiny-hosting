@@ -1,13 +1,13 @@
-const removeImports = await import("next-remove-imports");
+const removeImports = require("next-remove-imports");
 
-/**
- * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
- * for Docker builds.
- */
-await import("./src/env.js");
+// /**
+//  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
+//  * for Docker builds.
+//  */
+// require("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = removeImports.default()({
+const config = removeImports()({
   reactStrictMode: true,
   // @ts-ignore
   webpack: (config) => {
@@ -29,4 +29,4 @@ const config = removeImports.default()({
   },
 });
 
-export default config;
+module.exports = config;
