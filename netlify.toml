@@ -1,4 +1,4 @@
 [[redirects]]
 from = "https://raw.tinyhosting.dev/f/*"
-to = "/raw/:splat"
+to = "https://tinyhosting.dev/raw/:splat"
 status = 200
