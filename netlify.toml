@@ -1,0 +1,4 @@
+[[redirects]]
+from = "https://raw.tinyhosting.dev/f/*"
+to = "/raw/:splat"
+status = 200
