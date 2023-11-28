@@ -23,7 +23,7 @@ export function PresetShare() {
             <div className="flex items-center gap-2">
               <Input
                 id="link"
-                defaultValue={`https://raw.md.tiny-hosting/f/${id}`}
+                defaultValue={`https://raw.md.tinyhosting.dev/f/${id}`}
                 readOnly
                 className="h-9"
               />
@@ -38,7 +38,7 @@ export function PresetShare() {
             <div className="flex items-center gap-2">
               <Input
                 id="link"
-                defaultValue={`https://pretty.md.tiny-hosting/f/${id}`}
+                defaultValue={`https://pretty.md.tinyhosting.dev/f/${id}`}
                 readOnly
                 className="h-9"
               />

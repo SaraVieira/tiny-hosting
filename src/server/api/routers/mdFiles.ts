@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { createTRPCRouter, protectedProcedure } from "~/server/api/trpc";
+import { createTRPCRouter, protectedProcedure, publicProcedure } from "~/server/api/trpc";
 
 export const mdFilesRouter = createTRPCRouter({
   //   hello: publicProcedure
@@ -53,7 +53,7 @@ export const mdFilesRouter = createTRPCRouter({
     });
   }),
 
-  get: protectedProcedure
+  get: publicProcedure
     .input(
       z.object({
         id: z.string(),
