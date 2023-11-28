@@ -1,9 +1,9 @@
-import { useNewId } from "~/hooks/useNewId";
 import { api } from "~/utils/api";
 import ReactMarkdown from "react-markdown";
+import { useLastPath } from "~/hooks/useLastPath";
 
 export default function New() {
-  const id = useNewId("/html/");
+  const id = useLastPath();
 
   const { data } = api.mdfiles.get.useQuery({
     id,

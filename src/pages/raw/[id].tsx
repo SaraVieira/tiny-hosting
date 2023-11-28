@@ -1,8 +1,9 @@
-import { useNewId } from "~/hooks/useNewId";
+import { useLastPath } from "~/hooks/useLastPath";
+
 import { api } from "~/utils/api";
 
 export default function New() {
-  const id = useNewId("/raw/");
+  const id = useLastPath();
 
   const { data } = api.mdfiles.get.useQuery({
     id,
